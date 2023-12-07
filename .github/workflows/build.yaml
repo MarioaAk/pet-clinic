@@ -26,7 +26,7 @@ jobs:
           # hier ist Platz für maven package und docker build
           mvn package
           docker build --tag marioakermann/petclinic/pet-clinic:latest -f Dockerfile .
-          docker login marioakermann/petclinic/ -u marioakermann –p ${password}
+          docker login marioakermann/petclinic/ -u marioakermann –p ${secrets.password}
           docker push marioakermann/petclinic/pet-clinic:latest
 
 
