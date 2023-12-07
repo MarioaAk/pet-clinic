@@ -27,7 +27,7 @@ jobs:
           mvn package
           docker build --tag marioakermann/pet-clinic:latest -f Dockerfile .
           echo ${{ secrets.password }} | docker login docker.io/marioakermann/pet-clinic -u 'marioakermann' --password-stdin
-          docker push marioakermann/pet-clinic:latest
+          docker push docker.io/marioakermann/pet-clinic:latest
 
 
 
